@@ -38,9 +38,21 @@ const Promt = () => {
      
 
 
-    useEffect(()=>{
-     promtEndRef.current?.scrollIntoView({behaviour: "smooth"})
-    },[promt, loading])
+    // useEffect(()=>{
+    //  promtEndRef.current?.scrollIntoView({behavior: "smooth"})
+    // },[promt, loading])
+
+
+    useEffect(() => {
+  const el = document.getElementById("promtContainer");
+  if (el) {
+    el.scrollTo({ top: 0, behavior: "smooth" }); // start from top
+  }
+}, [promt, loading]);
+
+
+
+
 
     console.log(promt)
 
@@ -84,19 +96,15 @@ const Promt = () => {
       }
     }
 
-    // const hanldeKeyDown = (e) => {
-    //   if(e.key === "Enter") {
-    //     handleSend()
-    //   }
-    // }
+   
 
     const handleKeyDown = (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
-      // Only Enter (no Shift) → Submit
-      e.preventDefault(); // Prevent newline
+    
+      e.preventDefault(); 
       handleSend();
     }
-    // Shift+Enter → default behavior inserts newline, no need to handle
+   
   };
 
 
@@ -181,18 +189,6 @@ const Promt = () => {
 
 
 
-  {/* 👇 Fixed Input Section
-  <div className="w-full max-w-4xl mx-auto mb-4">
-    <input
-      type="text"
-      placeholder="Type your message..."
-      className="w-full p-3 rounded-lg border border-gray-300"
-      value={inputValue}
-      onChange={(e) => setInputValue(e.target.value)}
-      onKeyDown={handleKeyDown}
-    />
-  </div>
-</div> */}
 
 
 
@@ -241,3 +237,22 @@ const Promt = () => {
 }
 
 export default Promt
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+

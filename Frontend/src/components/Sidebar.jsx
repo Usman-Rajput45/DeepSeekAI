@@ -46,7 +46,11 @@ alert(error?.response?.data?.errors || "Logout Failed")
 
 {/* History */}
 <div className='flex-1 overflow-y-auto px-4 py-3 space-y-2 '>
+
+
   <button className='w-full bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl mb-4  '>+ New Chat</button>
+
+
   <div className='text-gray-500 text-sm mt-20 text-center '>No chat history yet</div>
 </div>
 
@@ -70,3 +74,13 @@ alert(error?.response?.data?.errors || "Logout Failed")
 }
 
 export default Sidebar
+
+
+
+
+
+
+
+
+
+
