@@ -66,7 +66,7 @@ const Promt = () => {
       try{
         const token = localStorage.getItem("token")
        
-        const {data} =  await axios.post("http://localhost:4002/api/v1/DeepSeekAi/promt",
+        const {data} =  await axios.post("https://deepseekai-production.up.railway.app/api/v1/DeepSeekAi/promt",
             {content:trimmed},
             {
               headers:{

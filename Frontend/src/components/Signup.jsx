@@ -32,7 +32,7 @@ setformdata({
     setloading(true)
     setError("")
     try{
-      const data = await axios.post("http://localhost:4002/api/v1/user/signup", {
+      const data = await axios.post("https://deepseekai-production.up.railway.app/api/v1/user/signup", {
           firstName:formdata.firstName,
            lastName:formdata.lastName,
             email:formdata.email,

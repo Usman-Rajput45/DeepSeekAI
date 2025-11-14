@@ -40,7 +40,7 @@ setformdata({
       //       email:formdata.email,
       //        password:formdata.password,
       //   },{
-      const res = await axios.post("http://localhost:4002/api/v1/user/login", {
+      const res = await axios.post("https://deepseekai-production.up.railway.app/api/v1/user/login", {
         
              email:formdata.email,
               password:formdata.password,
