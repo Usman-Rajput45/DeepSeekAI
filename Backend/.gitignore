@@ -1,5 +1,5 @@
 # Node modules
-node_modules/
+/node_modules/
 
 # Environment variables
 .env
@@ -14,9 +14,9 @@ yarn-error.log*
 Thumbs.db
 
 # Build files
-dist/
-build/
+/dist/
+/build/
 
 # IDE files
 .vscode/
-.idea/
+/.idea/
